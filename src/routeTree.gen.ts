@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolutionsRetailRouteImport } from './routes/solutions.retail'
 import { Route as SolutionsManufacturingRouteImport } from './routes/solutions.manufacturing'
@@ -25,6 +26,13 @@ import { Route as ServicesMaintenanceSupportRouteImport } from './routes/service
 import { Route as ServicesDigitalTransformationRouteImport } from './routes/services.digital-transformation'
 import { Route as ServicesCloudMigrationRouteImport } from './routes/services.cloud-migration'
 import { Route as ServicesAiConsultingRouteImport } from './routes/services.ai-consulting'
+import { Route as ResourcesSuccessStoriesRouteImport } from './routes/resources.success-stories'
+import { Route as ResourcesHelpCenterRouteImport } from './routes/resources.help-center'
+import { Route as ResourcesFaqsRouteImport } from './routes/resources.faqs'
+import { Route as ResourcesDocumentationRouteImport } from './routes/resources.documentation'
+import { Route as ResourcesContactRouteImport } from './routes/resources.contact'
+import { Route as ResourcesCaseStudiesRouteImport } from './routes/resources.case-studies'
+import { Route as ResourcesBlogRouteImport } from './routes/resources.blog'
 import { Route as ProductsWebApplicationsRouteImport } from './routes/products.web-applications'
 import { Route as ProductsSystemArchitectureRouteImport } from './routes/products.system-architecture'
 import { Route as ProductsSaasPlatformsRouteImport } from './routes/products.saas-platforms'
@@ -44,8 +52,15 @@ import { Route as ProductsAiAgentsRouteImport } from './routes/products.ai-agent
 import { Route as CompanyTeamRouteImport } from './routes/company.team'
 import { Route as CompanyPartnersRouteImport } from './routes/company.partners'
 import { Route as CompanyNewsRouteImport } from './routes/company.news'
+import { Route as CompanyContactRouteImport } from './routes/company.contact'
+import { Route as CompanyCareersRouteImport } from './routes/company.careers'
 import { Route as CompanyAboutRouteImport } from './routes/company.about'
 
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -127,6 +142,41 @@ const ServicesCloudMigrationRoute = ServicesCloudMigrationRouteImport.update({
 const ServicesAiConsultingRoute = ServicesAiConsultingRouteImport.update({
   id: '/services/ai-consulting',
   path: '/services/ai-consulting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesSuccessStoriesRoute = ResourcesSuccessStoriesRouteImport.update({
+  id: '/resources/success-stories',
+  path: '/resources/success-stories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesHelpCenterRoute = ResourcesHelpCenterRouteImport.update({
+  id: '/resources/help-center',
+  path: '/resources/help-center',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesFaqsRoute = ResourcesFaqsRouteImport.update({
+  id: '/resources/faqs',
+  path: '/resources/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesDocumentationRoute = ResourcesDocumentationRouteImport.update({
+  id: '/resources/documentation',
+  path: '/resources/documentation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesContactRoute = ResourcesContactRouteImport.update({
+  id: '/resources/contact',
+  path: '/resources/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesCaseStudiesRoute = ResourcesCaseStudiesRouteImport.update({
+  id: '/resources/case-studies',
+  path: '/resources/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesBlogRoute = ResourcesBlogRouteImport.update({
+  id: '/resources/blog',
+  path: '/resources/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductsWebApplicationsRoute = ProductsWebApplicationsRouteImport.update({
@@ -232,6 +282,16 @@ const CompanyNewsRoute = CompanyNewsRouteImport.update({
   path: '/company/news',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompanyContactRoute = CompanyContactRouteImport.update({
+  id: '/company/contact',
+  path: '/company/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyCareersRoute = CompanyCareersRouteImport.update({
+  id: '/company/careers',
+  path: '/company/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CompanyAboutRoute = CompanyAboutRouteImport.update({
   id: '/company/about',
   path: '/company/about',
@@ -240,7 +300,10 @@ const CompanyAboutRoute = CompanyAboutRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/pricing': typeof PricingRoute
   '/company/about': typeof CompanyAboutRoute
+  '/company/careers': typeof CompanyCareersRoute
+  '/company/contact': typeof CompanyContactRoute
   '/company/news': typeof CompanyNewsRoute
   '/company/partners': typeof CompanyPartnersRoute
   '/company/team': typeof CompanyTeamRoute
@@ -260,6 +323,13 @@ export interface FileRoutesByFullPath {
   '/products/saas-platforms': typeof ProductsSaasPlatformsRoute
   '/products/system-architecture': typeof ProductsSystemArchitectureRoute
   '/products/web-applications': typeof ProductsWebApplicationsRoute
+  '/resources/blog': typeof ResourcesBlogRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/contact': typeof ResourcesContactRoute
+  '/resources/documentation': typeof ResourcesDocumentationRoute
+  '/resources/faqs': typeof ResourcesFaqsRoute
+  '/resources/help-center': typeof ResourcesHelpCenterRoute
+  '/resources/success-stories': typeof ResourcesSuccessStoriesRoute
   '/services/ai-consulting': typeof ServicesAiConsultingRoute
   '/services/cloud-migration': typeof ServicesCloudMigrationRoute
   '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
@@ -278,7 +348,10 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/pricing': typeof PricingRoute
   '/company/about': typeof CompanyAboutRoute
+  '/company/careers': typeof CompanyCareersRoute
+  '/company/contact': typeof CompanyContactRoute
   '/company/news': typeof CompanyNewsRoute
   '/company/partners': typeof CompanyPartnersRoute
   '/company/team': typeof CompanyTeamRoute
@@ -298,6 +371,13 @@ export interface FileRoutesByTo {
   '/products/saas-platforms': typeof ProductsSaasPlatformsRoute
   '/products/system-architecture': typeof ProductsSystemArchitectureRoute
   '/products/web-applications': typeof ProductsWebApplicationsRoute
+  '/resources/blog': typeof ResourcesBlogRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/contact': typeof ResourcesContactRoute
+  '/resources/documentation': typeof ResourcesDocumentationRoute
+  '/resources/faqs': typeof ResourcesFaqsRoute
+  '/resources/help-center': typeof ResourcesHelpCenterRoute
+  '/resources/success-stories': typeof ResourcesSuccessStoriesRoute
   '/services/ai-consulting': typeof ServicesAiConsultingRoute
   '/services/cloud-migration': typeof ServicesCloudMigrationRoute
   '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
@@ -317,7 +397,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/pricing': typeof PricingRoute
   '/company/about': typeof CompanyAboutRoute
+  '/company/careers': typeof CompanyCareersRoute
+  '/company/contact': typeof CompanyContactRoute
   '/company/news': typeof CompanyNewsRoute
   '/company/partners': typeof CompanyPartnersRoute
   '/company/team': typeof CompanyTeamRoute
@@ -337,6 +420,13 @@ export interface FileRoutesById {
   '/products/saas-platforms': typeof ProductsSaasPlatformsRoute
   '/products/system-architecture': typeof ProductsSystemArchitectureRoute
   '/products/web-applications': typeof ProductsWebApplicationsRoute
+  '/resources/blog': typeof ResourcesBlogRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/contact': typeof ResourcesContactRoute
+  '/resources/documentation': typeof ResourcesDocumentationRoute
+  '/resources/faqs': typeof ResourcesFaqsRoute
+  '/resources/help-center': typeof ResourcesHelpCenterRoute
+  '/resources/success-stories': typeof ResourcesSuccessStoriesRoute
   '/services/ai-consulting': typeof ServicesAiConsultingRoute
   '/services/cloud-migration': typeof ServicesCloudMigrationRoute
   '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
@@ -357,7 +447,10 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/pricing'
     | '/company/about'
+    | '/company/careers'
+    | '/company/contact'
     | '/company/news'
     | '/company/partners'
     | '/company/team'
@@ -377,6 +470,13 @@ export interface FileRouteTypes {
     | '/products/saas-platforms'
     | '/products/system-architecture'
     | '/products/web-applications'
+    | '/resources/blog'
+    | '/resources/case-studies'
+    | '/resources/contact'
+    | '/resources/documentation'
+    | '/resources/faqs'
+    | '/resources/help-center'
+    | '/resources/success-stories'
     | '/services/ai-consulting'
     | '/services/cloud-migration'
     | '/services/digital-transformation'
@@ -395,7 +495,10 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/pricing'
     | '/company/about'
+    | '/company/careers'
+    | '/company/contact'
     | '/company/news'
     | '/company/partners'
     | '/company/team'
@@ -415,6 +518,13 @@ export interface FileRouteTypes {
     | '/products/saas-platforms'
     | '/products/system-architecture'
     | '/products/web-applications'
+    | '/resources/blog'
+    | '/resources/case-studies'
+    | '/resources/contact'
+    | '/resources/documentation'
+    | '/resources/faqs'
+    | '/resources/help-center'
+    | '/resources/success-stories'
     | '/services/ai-consulting'
     | '/services/cloud-migration'
     | '/services/digital-transformation'
@@ -433,7 +543,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/pricing'
     | '/company/about'
+    | '/company/careers'
+    | '/company/contact'
     | '/company/news'
     | '/company/partners'
     | '/company/team'
@@ -453,6 +566,13 @@ export interface FileRouteTypes {
     | '/products/saas-platforms'
     | '/products/system-architecture'
     | '/products/web-applications'
+    | '/resources/blog'
+    | '/resources/case-studies'
+    | '/resources/contact'
+    | '/resources/documentation'
+    | '/resources/faqs'
+    | '/resources/help-center'
+    | '/resources/success-stories'
     | '/services/ai-consulting'
     | '/services/cloud-migration'
     | '/services/digital-transformation'
@@ -472,7 +592,10 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PricingRoute: typeof PricingRoute
   CompanyAboutRoute: typeof CompanyAboutRoute
+  CompanyCareersRoute: typeof CompanyCareersRoute
+  CompanyContactRoute: typeof CompanyContactRoute
   CompanyNewsRoute: typeof CompanyNewsRoute
   CompanyPartnersRoute: typeof CompanyPartnersRoute
   CompanyTeamRoute: typeof CompanyTeamRoute
@@ -492,6 +615,13 @@ export interface RootRouteChildren {
   ProductsSaasPlatformsRoute: typeof ProductsSaasPlatformsRoute
   ProductsSystemArchitectureRoute: typeof ProductsSystemArchitectureRoute
   ProductsWebApplicationsRoute: typeof ProductsWebApplicationsRoute
+  ResourcesBlogRoute: typeof ResourcesBlogRoute
+  ResourcesCaseStudiesRoute: typeof ResourcesCaseStudiesRoute
+  ResourcesContactRoute: typeof ResourcesContactRoute
+  ResourcesDocumentationRoute: typeof ResourcesDocumentationRoute
+  ResourcesFaqsRoute: typeof ResourcesFaqsRoute
+  ResourcesHelpCenterRoute: typeof ResourcesHelpCenterRoute
+  ResourcesSuccessStoriesRoute: typeof ResourcesSuccessStoriesRoute
   ServicesAiConsultingRoute: typeof ServicesAiConsultingRoute
   ServicesCloudMigrationRoute: typeof ServicesCloudMigrationRoute
   ServicesDigitalTransformationRoute: typeof ServicesDigitalTransformationRoute
@@ -511,6 +641,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -621,6 +758,55 @@ declare module '@tanstack/react-router' {
       path: '/services/ai-consulting'
       fullPath: '/services/ai-consulting'
       preLoaderRoute: typeof ServicesAiConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/success-stories': {
+      id: '/resources/success-stories'
+      path: '/resources/success-stories'
+      fullPath: '/resources/success-stories'
+      preLoaderRoute: typeof ResourcesSuccessStoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/help-center': {
+      id: '/resources/help-center'
+      path: '/resources/help-center'
+      fullPath: '/resources/help-center'
+      preLoaderRoute: typeof ResourcesHelpCenterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/faqs': {
+      id: '/resources/faqs'
+      path: '/resources/faqs'
+      fullPath: '/resources/faqs'
+      preLoaderRoute: typeof ResourcesFaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/documentation': {
+      id: '/resources/documentation'
+      path: '/resources/documentation'
+      fullPath: '/resources/documentation'
+      preLoaderRoute: typeof ResourcesDocumentationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/contact': {
+      id: '/resources/contact'
+      path: '/resources/contact'
+      fullPath: '/resources/contact'
+      preLoaderRoute: typeof ResourcesContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/case-studies': {
+      id: '/resources/case-studies'
+      path: '/resources/case-studies'
+      fullPath: '/resources/case-studies'
+      preLoaderRoute: typeof ResourcesCaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/blog': {
+      id: '/resources/blog'
+      path: '/resources/blog'
+      fullPath: '/resources/blog'
+      preLoaderRoute: typeof ResourcesBlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products/web-applications': {
@@ -756,6 +942,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompanyNewsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/company/contact': {
+      id: '/company/contact'
+      path: '/company/contact'
+      fullPath: '/company/contact'
+      preLoaderRoute: typeof CompanyContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company/careers': {
+      id: '/company/careers'
+      path: '/company/careers'
+      fullPath: '/company/careers'
+      preLoaderRoute: typeof CompanyCareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/company/about': {
       id: '/company/about'
       path: '/company/about'
@@ -768,7 +968,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PricingRoute: PricingRoute,
   CompanyAboutRoute: CompanyAboutRoute,
+  CompanyCareersRoute: CompanyCareersRoute,
+  CompanyContactRoute: CompanyContactRoute,
   CompanyNewsRoute: CompanyNewsRoute,
   CompanyPartnersRoute: CompanyPartnersRoute,
   CompanyTeamRoute: CompanyTeamRoute,
@@ -788,6 +991,13 @@ const rootRouteChildren: RootRouteChildren = {
   ProductsSaasPlatformsRoute: ProductsSaasPlatformsRoute,
   ProductsSystemArchitectureRoute: ProductsSystemArchitectureRoute,
   ProductsWebApplicationsRoute: ProductsWebApplicationsRoute,
+  ResourcesBlogRoute: ResourcesBlogRoute,
+  ResourcesCaseStudiesRoute: ResourcesCaseStudiesRoute,
+  ResourcesContactRoute: ResourcesContactRoute,
+  ResourcesDocumentationRoute: ResourcesDocumentationRoute,
+  ResourcesFaqsRoute: ResourcesFaqsRoute,
+  ResourcesHelpCenterRoute: ResourcesHelpCenterRoute,
+  ResourcesSuccessStoriesRoute: ResourcesSuccessStoriesRoute,
   ServicesAiConsultingRoute: ServicesAiConsultingRoute,
   ServicesCloudMigrationRoute: ServicesCloudMigrationRoute,
   ServicesDigitalTransformationRoute: ServicesDigitalTransformationRoute,
