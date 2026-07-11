@@ -9,38 +9,645 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolutionsRetailRouteImport } from './routes/solutions.retail'
+import { Route as SolutionsManufacturingRouteImport } from './routes/solutions.manufacturing'
+import { Route as SolutionsLogisticsRouteImport } from './routes/solutions.logistics'
+import { Route as SolutionsHealthcareRouteImport } from './routes/solutions.healthcare'
+import { Route as SolutionsGovernmentRouteImport } from './routes/solutions.government'
+import { Route as SolutionsFinanceRouteImport } from './routes/solutions.finance'
+import { Route as SolutionsEnterpriseRouteImport } from './routes/solutions.enterprise'
+import { Route as SolutionsEducationRouteImport } from './routes/solutions.education'
+import { Route as ServicesUxUiDesignRouteImport } from './routes/services.ux-ui-design'
+import { Route as ServicesSoftwareDevelopmentRouteImport } from './routes/services.software-development'
+import { Route as ServicesProductStrategyRouteImport } from './routes/services.product-strategy'
+import { Route as ServicesMaintenanceSupportRouteImport } from './routes/services.maintenance-support'
+import { Route as ServicesDigitalTransformationRouteImport } from './routes/services.digital-transformation'
+import { Route as ServicesCloudMigrationRouteImport } from './routes/services.cloud-migration'
+import { Route as ServicesAiConsultingRouteImport } from './routes/services.ai-consulting'
+import { Route as ResourcesSuccessStoriesRouteImport } from './routes/resources.success-stories'
+import { Route as ResourcesHelpCenterRouteImport } from './routes/resources.help-center'
+import { Route as ResourcesFaqsRouteImport } from './routes/resources.faqs'
+import { Route as ResourcesDocumentationRouteImport } from './routes/resources.documentation'
+import { Route as ResourcesContactRouteImport } from './routes/resources.contact'
+import { Route as ResourcesCaseStudiesRouteImport } from './routes/resources.case-studies'
+import { Route as ResourcesBlogRouteImport } from './routes/resources.blog'
+import { Route as ProductsWebApplicationsRouteImport } from './routes/products.web-applications'
+import { Route as ProductsSystemArchitectureRouteImport } from './routes/products.system-architecture'
+import { Route as ProductsSaasPlatformsRouteImport } from './routes/products.saas-platforms'
+import { Route as ProductsReportingDashboardRouteImport } from './routes/products.reporting-dashboard'
+import { Route as ProductsMobileApplicationsRouteImport } from './routes/products.mobile-applications'
+import { Route as ProductsInternalBusinessSystemsRouteImport } from './routes/products.internal-business-systems'
+import { Route as ProductsEnterpriseAiSolutionsRouteImport } from './routes/products.enterprise-ai-solutions'
+import { Route as ProductsDevopsRouteImport } from './routes/products.devops'
+import { Route as ProductsDataAnalyticsRouteImport } from './routes/products.data-analytics'
+import { Route as ProductsCustomAiDevelopmentRouteImport } from './routes/products.custom-ai-development'
+import { Route as ProductsCloudIntegrationRouteImport } from './routes/products.cloud-integration'
+import { Route as ProductsBusinessIntelligenceRouteImport } from './routes/products.business-intelligence'
+import { Route as ProductsApiDevelopmentRouteImport } from './routes/products.api-development'
+import { Route as ProductsAiInsightsRouteImport } from './routes/products.ai-insights'
+import { Route as ProductsAiAutomationRouteImport } from './routes/products.ai-automation'
+import { Route as ProductsAiAgentsRouteImport } from './routes/products.ai-agents'
+import { Route as CompanyTeamRouteImport } from './routes/company.team'
+import { Route as CompanyPartnersRouteImport } from './routes/company.partners'
+import { Route as CompanyNewsRouteImport } from './routes/company.news'
+import { Route as CompanyContactRouteImport } from './routes/company.contact'
+import { Route as CompanyCareersRouteImport } from './routes/company.careers'
+import { Route as CompanyAboutRouteImport } from './routes/company.about'
 
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsRetailRoute = SolutionsRetailRouteImport.update({
+  id: '/solutions/retail',
+  path: '/solutions/retail',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsManufacturingRoute = SolutionsManufacturingRouteImport.update({
+  id: '/solutions/manufacturing',
+  path: '/solutions/manufacturing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsLogisticsRoute = SolutionsLogisticsRouteImport.update({
+  id: '/solutions/logistics',
+  path: '/solutions/logistics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsHealthcareRoute = SolutionsHealthcareRouteImport.update({
+  id: '/solutions/healthcare',
+  path: '/solutions/healthcare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsGovernmentRoute = SolutionsGovernmentRouteImport.update({
+  id: '/solutions/government',
+  path: '/solutions/government',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsFinanceRoute = SolutionsFinanceRouteImport.update({
+  id: '/solutions/finance',
+  path: '/solutions/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsEnterpriseRoute = SolutionsEnterpriseRouteImport.update({
+  id: '/solutions/enterprise',
+  path: '/solutions/enterprise',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsEducationRoute = SolutionsEducationRouteImport.update({
+  id: '/solutions/education',
+  path: '/solutions/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesUxUiDesignRoute = ServicesUxUiDesignRouteImport.update({
+  id: '/services/ux-ui-design',
+  path: '/services/ux-ui-design',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSoftwareDevelopmentRoute =
+  ServicesSoftwareDevelopmentRouteImport.update({
+    id: '/services/software-development',
+    path: '/services/software-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesProductStrategyRoute = ServicesProductStrategyRouteImport.update({
+  id: '/services/product-strategy',
+  path: '/services/product-strategy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesMaintenanceSupportRoute =
+  ServicesMaintenanceSupportRouteImport.update({
+    id: '/services/maintenance-support',
+    path: '/services/maintenance-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesDigitalTransformationRoute =
+  ServicesDigitalTransformationRouteImport.update({
+    id: '/services/digital-transformation',
+    path: '/services/digital-transformation',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesCloudMigrationRoute = ServicesCloudMigrationRouteImport.update({
+  id: '/services/cloud-migration',
+  path: '/services/cloud-migration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesAiConsultingRoute = ServicesAiConsultingRouteImport.update({
+  id: '/services/ai-consulting',
+  path: '/services/ai-consulting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesSuccessStoriesRoute = ResourcesSuccessStoriesRouteImport.update({
+  id: '/resources/success-stories',
+  path: '/resources/success-stories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesHelpCenterRoute = ResourcesHelpCenterRouteImport.update({
+  id: '/resources/help-center',
+  path: '/resources/help-center',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesFaqsRoute = ResourcesFaqsRouteImport.update({
+  id: '/resources/faqs',
+  path: '/resources/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesDocumentationRoute = ResourcesDocumentationRouteImport.update({
+  id: '/resources/documentation',
+  path: '/resources/documentation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesContactRoute = ResourcesContactRouteImport.update({
+  id: '/resources/contact',
+  path: '/resources/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesCaseStudiesRoute = ResourcesCaseStudiesRouteImport.update({
+  id: '/resources/case-studies',
+  path: '/resources/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesBlogRoute = ResourcesBlogRouteImport.update({
+  id: '/resources/blog',
+  path: '/resources/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsWebApplicationsRoute = ProductsWebApplicationsRouteImport.update({
+  id: '/products/web-applications',
+  path: '/products/web-applications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsSystemArchitectureRoute =
+  ProductsSystemArchitectureRouteImport.update({
+    id: '/products/system-architecture',
+    path: '/products/system-architecture',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsSaasPlatformsRoute = ProductsSaasPlatformsRouteImport.update({
+  id: '/products/saas-platforms',
+  path: '/products/saas-platforms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsReportingDashboardRoute =
+  ProductsReportingDashboardRouteImport.update({
+    id: '/products/reporting-dashboard',
+    path: '/products/reporting-dashboard',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsMobileApplicationsRoute =
+  ProductsMobileApplicationsRouteImport.update({
+    id: '/products/mobile-applications',
+    path: '/products/mobile-applications',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsInternalBusinessSystemsRoute =
+  ProductsInternalBusinessSystemsRouteImport.update({
+    id: '/products/internal-business-systems',
+    path: '/products/internal-business-systems',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsEnterpriseAiSolutionsRoute =
+  ProductsEnterpriseAiSolutionsRouteImport.update({
+    id: '/products/enterprise-ai-solutions',
+    path: '/products/enterprise-ai-solutions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsDevopsRoute = ProductsDevopsRouteImport.update({
+  id: '/products/devops',
+  path: '/products/devops',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsDataAnalyticsRoute = ProductsDataAnalyticsRouteImport.update({
+  id: '/products/data-analytics',
+  path: '/products/data-analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsCustomAiDevelopmentRoute =
+  ProductsCustomAiDevelopmentRouteImport.update({
+    id: '/products/custom-ai-development',
+    path: '/products/custom-ai-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsCloudIntegrationRoute =
+  ProductsCloudIntegrationRouteImport.update({
+    id: '/products/cloud-integration',
+    path: '/products/cloud-integration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsBusinessIntelligenceRoute =
+  ProductsBusinessIntelligenceRouteImport.update({
+    id: '/products/business-intelligence',
+    path: '/products/business-intelligence',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProductsApiDevelopmentRoute = ProductsApiDevelopmentRouteImport.update({
+  id: '/products/api-development',
+  path: '/products/api-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsAiInsightsRoute = ProductsAiInsightsRouteImport.update({
+  id: '/products/ai-insights',
+  path: '/products/ai-insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsAiAutomationRoute = ProductsAiAutomationRouteImport.update({
+  id: '/products/ai-automation',
+  path: '/products/ai-automation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsAiAgentsRoute = ProductsAiAgentsRouteImport.update({
+  id: '/products/ai-agents',
+  path: '/products/ai-agents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyTeamRoute = CompanyTeamRouteImport.update({
+  id: '/company/team',
+  path: '/company/team',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyPartnersRoute = CompanyPartnersRouteImport.update({
+  id: '/company/partners',
+  path: '/company/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyNewsRoute = CompanyNewsRouteImport.update({
+  id: '/company/news',
+  path: '/company/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyContactRoute = CompanyContactRouteImport.update({
+  id: '/company/contact',
+  path: '/company/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyCareersRoute = CompanyCareersRouteImport.update({
+  id: '/company/careers',
+  path: '/company/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyAboutRoute = CompanyAboutRouteImport.update({
+  id: '/company/about',
+  path: '/company/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/pricing': typeof PricingRoute
+  '/company/about': typeof CompanyAboutRoute
+  '/company/careers': typeof CompanyCareersRoute
+  '/company/contact': typeof CompanyContactRoute
+  '/company/news': typeof CompanyNewsRoute
+  '/company/partners': typeof CompanyPartnersRoute
+  '/company/team': typeof CompanyTeamRoute
+  '/products/ai-agents': typeof ProductsAiAgentsRoute
+  '/products/ai-automation': typeof ProductsAiAutomationRoute
+  '/products/ai-insights': typeof ProductsAiInsightsRoute
+  '/products/api-development': typeof ProductsApiDevelopmentRoute
+  '/products/business-intelligence': typeof ProductsBusinessIntelligenceRoute
+  '/products/cloud-integration': typeof ProductsCloudIntegrationRoute
+  '/products/custom-ai-development': typeof ProductsCustomAiDevelopmentRoute
+  '/products/data-analytics': typeof ProductsDataAnalyticsRoute
+  '/products/devops': typeof ProductsDevopsRoute
+  '/products/enterprise-ai-solutions': typeof ProductsEnterpriseAiSolutionsRoute
+  '/products/internal-business-systems': typeof ProductsInternalBusinessSystemsRoute
+  '/products/mobile-applications': typeof ProductsMobileApplicationsRoute
+  '/products/reporting-dashboard': typeof ProductsReportingDashboardRoute
+  '/products/saas-platforms': typeof ProductsSaasPlatformsRoute
+  '/products/system-architecture': typeof ProductsSystemArchitectureRoute
+  '/products/web-applications': typeof ProductsWebApplicationsRoute
+  '/resources/blog': typeof ResourcesBlogRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/contact': typeof ResourcesContactRoute
+  '/resources/documentation': typeof ResourcesDocumentationRoute
+  '/resources/faqs': typeof ResourcesFaqsRoute
+  '/resources/help-center': typeof ResourcesHelpCenterRoute
+  '/resources/success-stories': typeof ResourcesSuccessStoriesRoute
+  '/services/ai-consulting': typeof ServicesAiConsultingRoute
+  '/services/cloud-migration': typeof ServicesCloudMigrationRoute
+  '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
+  '/services/maintenance-support': typeof ServicesMaintenanceSupportRoute
+  '/services/product-strategy': typeof ServicesProductStrategyRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services/ux-ui-design': typeof ServicesUxUiDesignRoute
+  '/solutions/education': typeof SolutionsEducationRoute
+  '/solutions/enterprise': typeof SolutionsEnterpriseRoute
+  '/solutions/finance': typeof SolutionsFinanceRoute
+  '/solutions/government': typeof SolutionsGovernmentRoute
+  '/solutions/healthcare': typeof SolutionsHealthcareRoute
+  '/solutions/logistics': typeof SolutionsLogisticsRoute
+  '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/retail': typeof SolutionsRetailRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/pricing': typeof PricingRoute
+  '/company/about': typeof CompanyAboutRoute
+  '/company/careers': typeof CompanyCareersRoute
+  '/company/contact': typeof CompanyContactRoute
+  '/company/news': typeof CompanyNewsRoute
+  '/company/partners': typeof CompanyPartnersRoute
+  '/company/team': typeof CompanyTeamRoute
+  '/products/ai-agents': typeof ProductsAiAgentsRoute
+  '/products/ai-automation': typeof ProductsAiAutomationRoute
+  '/products/ai-insights': typeof ProductsAiInsightsRoute
+  '/products/api-development': typeof ProductsApiDevelopmentRoute
+  '/products/business-intelligence': typeof ProductsBusinessIntelligenceRoute
+  '/products/cloud-integration': typeof ProductsCloudIntegrationRoute
+  '/products/custom-ai-development': typeof ProductsCustomAiDevelopmentRoute
+  '/products/data-analytics': typeof ProductsDataAnalyticsRoute
+  '/products/devops': typeof ProductsDevopsRoute
+  '/products/enterprise-ai-solutions': typeof ProductsEnterpriseAiSolutionsRoute
+  '/products/internal-business-systems': typeof ProductsInternalBusinessSystemsRoute
+  '/products/mobile-applications': typeof ProductsMobileApplicationsRoute
+  '/products/reporting-dashboard': typeof ProductsReportingDashboardRoute
+  '/products/saas-platforms': typeof ProductsSaasPlatformsRoute
+  '/products/system-architecture': typeof ProductsSystemArchitectureRoute
+  '/products/web-applications': typeof ProductsWebApplicationsRoute
+  '/resources/blog': typeof ResourcesBlogRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/contact': typeof ResourcesContactRoute
+  '/resources/documentation': typeof ResourcesDocumentationRoute
+  '/resources/faqs': typeof ResourcesFaqsRoute
+  '/resources/help-center': typeof ResourcesHelpCenterRoute
+  '/resources/success-stories': typeof ResourcesSuccessStoriesRoute
+  '/services/ai-consulting': typeof ServicesAiConsultingRoute
+  '/services/cloud-migration': typeof ServicesCloudMigrationRoute
+  '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
+  '/services/maintenance-support': typeof ServicesMaintenanceSupportRoute
+  '/services/product-strategy': typeof ServicesProductStrategyRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services/ux-ui-design': typeof ServicesUxUiDesignRoute
+  '/solutions/education': typeof SolutionsEducationRoute
+  '/solutions/enterprise': typeof SolutionsEnterpriseRoute
+  '/solutions/finance': typeof SolutionsFinanceRoute
+  '/solutions/government': typeof SolutionsGovernmentRoute
+  '/solutions/healthcare': typeof SolutionsHealthcareRoute
+  '/solutions/logistics': typeof SolutionsLogisticsRoute
+  '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/retail': typeof SolutionsRetailRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/pricing': typeof PricingRoute
+  '/company/about': typeof CompanyAboutRoute
+  '/company/careers': typeof CompanyCareersRoute
+  '/company/contact': typeof CompanyContactRoute
+  '/company/news': typeof CompanyNewsRoute
+  '/company/partners': typeof CompanyPartnersRoute
+  '/company/team': typeof CompanyTeamRoute
+  '/products/ai-agents': typeof ProductsAiAgentsRoute
+  '/products/ai-automation': typeof ProductsAiAutomationRoute
+  '/products/ai-insights': typeof ProductsAiInsightsRoute
+  '/products/api-development': typeof ProductsApiDevelopmentRoute
+  '/products/business-intelligence': typeof ProductsBusinessIntelligenceRoute
+  '/products/cloud-integration': typeof ProductsCloudIntegrationRoute
+  '/products/custom-ai-development': typeof ProductsCustomAiDevelopmentRoute
+  '/products/data-analytics': typeof ProductsDataAnalyticsRoute
+  '/products/devops': typeof ProductsDevopsRoute
+  '/products/enterprise-ai-solutions': typeof ProductsEnterpriseAiSolutionsRoute
+  '/products/internal-business-systems': typeof ProductsInternalBusinessSystemsRoute
+  '/products/mobile-applications': typeof ProductsMobileApplicationsRoute
+  '/products/reporting-dashboard': typeof ProductsReportingDashboardRoute
+  '/products/saas-platforms': typeof ProductsSaasPlatformsRoute
+  '/products/system-architecture': typeof ProductsSystemArchitectureRoute
+  '/products/web-applications': typeof ProductsWebApplicationsRoute
+  '/resources/blog': typeof ResourcesBlogRoute
+  '/resources/case-studies': typeof ResourcesCaseStudiesRoute
+  '/resources/contact': typeof ResourcesContactRoute
+  '/resources/documentation': typeof ResourcesDocumentationRoute
+  '/resources/faqs': typeof ResourcesFaqsRoute
+  '/resources/help-center': typeof ResourcesHelpCenterRoute
+  '/resources/success-stories': typeof ResourcesSuccessStoriesRoute
+  '/services/ai-consulting': typeof ServicesAiConsultingRoute
+  '/services/cloud-migration': typeof ServicesCloudMigrationRoute
+  '/services/digital-transformation': typeof ServicesDigitalTransformationRoute
+  '/services/maintenance-support': typeof ServicesMaintenanceSupportRoute
+  '/services/product-strategy': typeof ServicesProductStrategyRoute
+  '/services/software-development': typeof ServicesSoftwareDevelopmentRoute
+  '/services/ux-ui-design': typeof ServicesUxUiDesignRoute
+  '/solutions/education': typeof SolutionsEducationRoute
+  '/solutions/enterprise': typeof SolutionsEnterpriseRoute
+  '/solutions/finance': typeof SolutionsFinanceRoute
+  '/solutions/government': typeof SolutionsGovernmentRoute
+  '/solutions/healthcare': typeof SolutionsHealthcareRoute
+  '/solutions/logistics': typeof SolutionsLogisticsRoute
+  '/solutions/manufacturing': typeof SolutionsManufacturingRoute
+  '/solutions/retail': typeof SolutionsRetailRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/pricing'
+    | '/company/about'
+    | '/company/careers'
+    | '/company/contact'
+    | '/company/news'
+    | '/company/partners'
+    | '/company/team'
+    | '/products/ai-agents'
+    | '/products/ai-automation'
+    | '/products/ai-insights'
+    | '/products/api-development'
+    | '/products/business-intelligence'
+    | '/products/cloud-integration'
+    | '/products/custom-ai-development'
+    | '/products/data-analytics'
+    | '/products/devops'
+    | '/products/enterprise-ai-solutions'
+    | '/products/internal-business-systems'
+    | '/products/mobile-applications'
+    | '/products/reporting-dashboard'
+    | '/products/saas-platforms'
+    | '/products/system-architecture'
+    | '/products/web-applications'
+    | '/resources/blog'
+    | '/resources/case-studies'
+    | '/resources/contact'
+    | '/resources/documentation'
+    | '/resources/faqs'
+    | '/resources/help-center'
+    | '/resources/success-stories'
+    | '/services/ai-consulting'
+    | '/services/cloud-migration'
+    | '/services/digital-transformation'
+    | '/services/maintenance-support'
+    | '/services/product-strategy'
+    | '/services/software-development'
+    | '/services/ux-ui-design'
+    | '/solutions/education'
+    | '/solutions/enterprise'
+    | '/solutions/finance'
+    | '/solutions/government'
+    | '/solutions/healthcare'
+    | '/solutions/logistics'
+    | '/solutions/manufacturing'
+    | '/solutions/retail'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/pricing'
+    | '/company/about'
+    | '/company/careers'
+    | '/company/contact'
+    | '/company/news'
+    | '/company/partners'
+    | '/company/team'
+    | '/products/ai-agents'
+    | '/products/ai-automation'
+    | '/products/ai-insights'
+    | '/products/api-development'
+    | '/products/business-intelligence'
+    | '/products/cloud-integration'
+    | '/products/custom-ai-development'
+    | '/products/data-analytics'
+    | '/products/devops'
+    | '/products/enterprise-ai-solutions'
+    | '/products/internal-business-systems'
+    | '/products/mobile-applications'
+    | '/products/reporting-dashboard'
+    | '/products/saas-platforms'
+    | '/products/system-architecture'
+    | '/products/web-applications'
+    | '/resources/blog'
+    | '/resources/case-studies'
+    | '/resources/contact'
+    | '/resources/documentation'
+    | '/resources/faqs'
+    | '/resources/help-center'
+    | '/resources/success-stories'
+    | '/services/ai-consulting'
+    | '/services/cloud-migration'
+    | '/services/digital-transformation'
+    | '/services/maintenance-support'
+    | '/services/product-strategy'
+    | '/services/software-development'
+    | '/services/ux-ui-design'
+    | '/solutions/education'
+    | '/solutions/enterprise'
+    | '/solutions/finance'
+    | '/solutions/government'
+    | '/solutions/healthcare'
+    | '/solutions/logistics'
+    | '/solutions/manufacturing'
+    | '/solutions/retail'
+  id:
+    | '__root__'
+    | '/'
+    | '/pricing'
+    | '/company/about'
+    | '/company/careers'
+    | '/company/contact'
+    | '/company/news'
+    | '/company/partners'
+    | '/company/team'
+    | '/products/ai-agents'
+    | '/products/ai-automation'
+    | '/products/ai-insights'
+    | '/products/api-development'
+    | '/products/business-intelligence'
+    | '/products/cloud-integration'
+    | '/products/custom-ai-development'
+    | '/products/data-analytics'
+    | '/products/devops'
+    | '/products/enterprise-ai-solutions'
+    | '/products/internal-business-systems'
+    | '/products/mobile-applications'
+    | '/products/reporting-dashboard'
+    | '/products/saas-platforms'
+    | '/products/system-architecture'
+    | '/products/web-applications'
+    | '/resources/blog'
+    | '/resources/case-studies'
+    | '/resources/contact'
+    | '/resources/documentation'
+    | '/resources/faqs'
+    | '/resources/help-center'
+    | '/resources/success-stories'
+    | '/services/ai-consulting'
+    | '/services/cloud-migration'
+    | '/services/digital-transformation'
+    | '/services/maintenance-support'
+    | '/services/product-strategy'
+    | '/services/software-development'
+    | '/services/ux-ui-design'
+    | '/solutions/education'
+    | '/solutions/enterprise'
+    | '/solutions/finance'
+    | '/solutions/government'
+    | '/solutions/healthcare'
+    | '/solutions/logistics'
+    | '/solutions/manufacturing'
+    | '/solutions/retail'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PricingRoute: typeof PricingRoute
+  CompanyAboutRoute: typeof CompanyAboutRoute
+  CompanyCareersRoute: typeof CompanyCareersRoute
+  CompanyContactRoute: typeof CompanyContactRoute
+  CompanyNewsRoute: typeof CompanyNewsRoute
+  CompanyPartnersRoute: typeof CompanyPartnersRoute
+  CompanyTeamRoute: typeof CompanyTeamRoute
+  ProductsAiAgentsRoute: typeof ProductsAiAgentsRoute
+  ProductsAiAutomationRoute: typeof ProductsAiAutomationRoute
+  ProductsAiInsightsRoute: typeof ProductsAiInsightsRoute
+  ProductsApiDevelopmentRoute: typeof ProductsApiDevelopmentRoute
+  ProductsBusinessIntelligenceRoute: typeof ProductsBusinessIntelligenceRoute
+  ProductsCloudIntegrationRoute: typeof ProductsCloudIntegrationRoute
+  ProductsCustomAiDevelopmentRoute: typeof ProductsCustomAiDevelopmentRoute
+  ProductsDataAnalyticsRoute: typeof ProductsDataAnalyticsRoute
+  ProductsDevopsRoute: typeof ProductsDevopsRoute
+  ProductsEnterpriseAiSolutionsRoute: typeof ProductsEnterpriseAiSolutionsRoute
+  ProductsInternalBusinessSystemsRoute: typeof ProductsInternalBusinessSystemsRoute
+  ProductsMobileApplicationsRoute: typeof ProductsMobileApplicationsRoute
+  ProductsReportingDashboardRoute: typeof ProductsReportingDashboardRoute
+  ProductsSaasPlatformsRoute: typeof ProductsSaasPlatformsRoute
+  ProductsSystemArchitectureRoute: typeof ProductsSystemArchitectureRoute
+  ProductsWebApplicationsRoute: typeof ProductsWebApplicationsRoute
+  ResourcesBlogRoute: typeof ResourcesBlogRoute
+  ResourcesCaseStudiesRoute: typeof ResourcesCaseStudiesRoute
+  ResourcesContactRoute: typeof ResourcesContactRoute
+  ResourcesDocumentationRoute: typeof ResourcesDocumentationRoute
+  ResourcesFaqsRoute: typeof ResourcesFaqsRoute
+  ResourcesHelpCenterRoute: typeof ResourcesHelpCenterRoute
+  ResourcesSuccessStoriesRoute: typeof ResourcesSuccessStoriesRoute
+  ServicesAiConsultingRoute: typeof ServicesAiConsultingRoute
+  ServicesCloudMigrationRoute: typeof ServicesCloudMigrationRoute
+  ServicesDigitalTransformationRoute: typeof ServicesDigitalTransformationRoute
+  ServicesMaintenanceSupportRoute: typeof ServicesMaintenanceSupportRoute
+  ServicesProductStrategyRoute: typeof ServicesProductStrategyRoute
+  ServicesSoftwareDevelopmentRoute: typeof ServicesSoftwareDevelopmentRoute
+  ServicesUxUiDesignRoute: typeof ServicesUxUiDesignRoute
+  SolutionsEducationRoute: typeof SolutionsEducationRoute
+  SolutionsEnterpriseRoute: typeof SolutionsEnterpriseRoute
+  SolutionsFinanceRoute: typeof SolutionsFinanceRoute
+  SolutionsGovernmentRoute: typeof SolutionsGovernmentRoute
+  SolutionsHealthcareRoute: typeof SolutionsHealthcareRoute
+  SolutionsLogisticsRoute: typeof SolutionsLogisticsRoute
+  SolutionsManufacturingRoute: typeof SolutionsManufacturingRoute
+  SolutionsRetailRoute: typeof SolutionsRetailRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +655,364 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions/retail': {
+      id: '/solutions/retail'
+      path: '/solutions/retail'
+      fullPath: '/solutions/retail'
+      preLoaderRoute: typeof SolutionsRetailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/manufacturing': {
+      id: '/solutions/manufacturing'
+      path: '/solutions/manufacturing'
+      fullPath: '/solutions/manufacturing'
+      preLoaderRoute: typeof SolutionsManufacturingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/logistics': {
+      id: '/solutions/logistics'
+      path: '/solutions/logistics'
+      fullPath: '/solutions/logistics'
+      preLoaderRoute: typeof SolutionsLogisticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/healthcare': {
+      id: '/solutions/healthcare'
+      path: '/solutions/healthcare'
+      fullPath: '/solutions/healthcare'
+      preLoaderRoute: typeof SolutionsHealthcareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/government': {
+      id: '/solutions/government'
+      path: '/solutions/government'
+      fullPath: '/solutions/government'
+      preLoaderRoute: typeof SolutionsGovernmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/finance': {
+      id: '/solutions/finance'
+      path: '/solutions/finance'
+      fullPath: '/solutions/finance'
+      preLoaderRoute: typeof SolutionsFinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/enterprise': {
+      id: '/solutions/enterprise'
+      path: '/solutions/enterprise'
+      fullPath: '/solutions/enterprise'
+      preLoaderRoute: typeof SolutionsEnterpriseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/education': {
+      id: '/solutions/education'
+      path: '/solutions/education'
+      fullPath: '/solutions/education'
+      preLoaderRoute: typeof SolutionsEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/ux-ui-design': {
+      id: '/services/ux-ui-design'
+      path: '/services/ux-ui-design'
+      fullPath: '/services/ux-ui-design'
+      preLoaderRoute: typeof ServicesUxUiDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/software-development': {
+      id: '/services/software-development'
+      path: '/services/software-development'
+      fullPath: '/services/software-development'
+      preLoaderRoute: typeof ServicesSoftwareDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/product-strategy': {
+      id: '/services/product-strategy'
+      path: '/services/product-strategy'
+      fullPath: '/services/product-strategy'
+      preLoaderRoute: typeof ServicesProductStrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/maintenance-support': {
+      id: '/services/maintenance-support'
+      path: '/services/maintenance-support'
+      fullPath: '/services/maintenance-support'
+      preLoaderRoute: typeof ServicesMaintenanceSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/digital-transformation': {
+      id: '/services/digital-transformation'
+      path: '/services/digital-transformation'
+      fullPath: '/services/digital-transformation'
+      preLoaderRoute: typeof ServicesDigitalTransformationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/cloud-migration': {
+      id: '/services/cloud-migration'
+      path: '/services/cloud-migration'
+      fullPath: '/services/cloud-migration'
+      preLoaderRoute: typeof ServicesCloudMigrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/ai-consulting': {
+      id: '/services/ai-consulting'
+      path: '/services/ai-consulting'
+      fullPath: '/services/ai-consulting'
+      preLoaderRoute: typeof ServicesAiConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/success-stories': {
+      id: '/resources/success-stories'
+      path: '/resources/success-stories'
+      fullPath: '/resources/success-stories'
+      preLoaderRoute: typeof ResourcesSuccessStoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/help-center': {
+      id: '/resources/help-center'
+      path: '/resources/help-center'
+      fullPath: '/resources/help-center'
+      preLoaderRoute: typeof ResourcesHelpCenterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/faqs': {
+      id: '/resources/faqs'
+      path: '/resources/faqs'
+      fullPath: '/resources/faqs'
+      preLoaderRoute: typeof ResourcesFaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/documentation': {
+      id: '/resources/documentation'
+      path: '/resources/documentation'
+      fullPath: '/resources/documentation'
+      preLoaderRoute: typeof ResourcesDocumentationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/contact': {
+      id: '/resources/contact'
+      path: '/resources/contact'
+      fullPath: '/resources/contact'
+      preLoaderRoute: typeof ResourcesContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/case-studies': {
+      id: '/resources/case-studies'
+      path: '/resources/case-studies'
+      fullPath: '/resources/case-studies'
+      preLoaderRoute: typeof ResourcesCaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/blog': {
+      id: '/resources/blog'
+      path: '/resources/blog'
+      fullPath: '/resources/blog'
+      preLoaderRoute: typeof ResourcesBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/web-applications': {
+      id: '/products/web-applications'
+      path: '/products/web-applications'
+      fullPath: '/products/web-applications'
+      preLoaderRoute: typeof ProductsWebApplicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/system-architecture': {
+      id: '/products/system-architecture'
+      path: '/products/system-architecture'
+      fullPath: '/products/system-architecture'
+      preLoaderRoute: typeof ProductsSystemArchitectureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/saas-platforms': {
+      id: '/products/saas-platforms'
+      path: '/products/saas-platforms'
+      fullPath: '/products/saas-platforms'
+      preLoaderRoute: typeof ProductsSaasPlatformsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/reporting-dashboard': {
+      id: '/products/reporting-dashboard'
+      path: '/products/reporting-dashboard'
+      fullPath: '/products/reporting-dashboard'
+      preLoaderRoute: typeof ProductsReportingDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/mobile-applications': {
+      id: '/products/mobile-applications'
+      path: '/products/mobile-applications'
+      fullPath: '/products/mobile-applications'
+      preLoaderRoute: typeof ProductsMobileApplicationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/internal-business-systems': {
+      id: '/products/internal-business-systems'
+      path: '/products/internal-business-systems'
+      fullPath: '/products/internal-business-systems'
+      preLoaderRoute: typeof ProductsInternalBusinessSystemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/enterprise-ai-solutions': {
+      id: '/products/enterprise-ai-solutions'
+      path: '/products/enterprise-ai-solutions'
+      fullPath: '/products/enterprise-ai-solutions'
+      preLoaderRoute: typeof ProductsEnterpriseAiSolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/devops': {
+      id: '/products/devops'
+      path: '/products/devops'
+      fullPath: '/products/devops'
+      preLoaderRoute: typeof ProductsDevopsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/data-analytics': {
+      id: '/products/data-analytics'
+      path: '/products/data-analytics'
+      fullPath: '/products/data-analytics'
+      preLoaderRoute: typeof ProductsDataAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/custom-ai-development': {
+      id: '/products/custom-ai-development'
+      path: '/products/custom-ai-development'
+      fullPath: '/products/custom-ai-development'
+      preLoaderRoute: typeof ProductsCustomAiDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/cloud-integration': {
+      id: '/products/cloud-integration'
+      path: '/products/cloud-integration'
+      fullPath: '/products/cloud-integration'
+      preLoaderRoute: typeof ProductsCloudIntegrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/business-intelligence': {
+      id: '/products/business-intelligence'
+      path: '/products/business-intelligence'
+      fullPath: '/products/business-intelligence'
+      preLoaderRoute: typeof ProductsBusinessIntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/api-development': {
+      id: '/products/api-development'
+      path: '/products/api-development'
+      fullPath: '/products/api-development'
+      preLoaderRoute: typeof ProductsApiDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/ai-insights': {
+      id: '/products/ai-insights'
+      path: '/products/ai-insights'
+      fullPath: '/products/ai-insights'
+      preLoaderRoute: typeof ProductsAiInsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/ai-automation': {
+      id: '/products/ai-automation'
+      path: '/products/ai-automation'
+      fullPath: '/products/ai-automation'
+      preLoaderRoute: typeof ProductsAiAutomationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/ai-agents': {
+      id: '/products/ai-agents'
+      path: '/products/ai-agents'
+      fullPath: '/products/ai-agents'
+      preLoaderRoute: typeof ProductsAiAgentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company/team': {
+      id: '/company/team'
+      path: '/company/team'
+      fullPath: '/company/team'
+      preLoaderRoute: typeof CompanyTeamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company/partners': {
+      id: '/company/partners'
+      path: '/company/partners'
+      fullPath: '/company/partners'
+      preLoaderRoute: typeof CompanyPartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company/news': {
+      id: '/company/news'
+      path: '/company/news'
+      fullPath: '/company/news'
+      preLoaderRoute: typeof CompanyNewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company/contact': {
+      id: '/company/contact'
+      path: '/company/contact'
+      fullPath: '/company/contact'
+      preLoaderRoute: typeof CompanyContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company/careers': {
+      id: '/company/careers'
+      path: '/company/careers'
+      fullPath: '/company/careers'
+      preLoaderRoute: typeof CompanyCareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company/about': {
+      id: '/company/about'
+      path: '/company/about'
+      fullPath: '/company/about'
+      preLoaderRoute: typeof CompanyAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PricingRoute: PricingRoute,
+  CompanyAboutRoute: CompanyAboutRoute,
+  CompanyCareersRoute: CompanyCareersRoute,
+  CompanyContactRoute: CompanyContactRoute,
+  CompanyNewsRoute: CompanyNewsRoute,
+  CompanyPartnersRoute: CompanyPartnersRoute,
+  CompanyTeamRoute: CompanyTeamRoute,
+  ProductsAiAgentsRoute: ProductsAiAgentsRoute,
+  ProductsAiAutomationRoute: ProductsAiAutomationRoute,
+  ProductsAiInsightsRoute: ProductsAiInsightsRoute,
+  ProductsApiDevelopmentRoute: ProductsApiDevelopmentRoute,
+  ProductsBusinessIntelligenceRoute: ProductsBusinessIntelligenceRoute,
+  ProductsCloudIntegrationRoute: ProductsCloudIntegrationRoute,
+  ProductsCustomAiDevelopmentRoute: ProductsCustomAiDevelopmentRoute,
+  ProductsDataAnalyticsRoute: ProductsDataAnalyticsRoute,
+  ProductsDevopsRoute: ProductsDevopsRoute,
+  ProductsEnterpriseAiSolutionsRoute: ProductsEnterpriseAiSolutionsRoute,
+  ProductsInternalBusinessSystemsRoute: ProductsInternalBusinessSystemsRoute,
+  ProductsMobileApplicationsRoute: ProductsMobileApplicationsRoute,
+  ProductsReportingDashboardRoute: ProductsReportingDashboardRoute,
+  ProductsSaasPlatformsRoute: ProductsSaasPlatformsRoute,
+  ProductsSystemArchitectureRoute: ProductsSystemArchitectureRoute,
+  ProductsWebApplicationsRoute: ProductsWebApplicationsRoute,
+  ResourcesBlogRoute: ResourcesBlogRoute,
+  ResourcesCaseStudiesRoute: ResourcesCaseStudiesRoute,
+  ResourcesContactRoute: ResourcesContactRoute,
+  ResourcesDocumentationRoute: ResourcesDocumentationRoute,
+  ResourcesFaqsRoute: ResourcesFaqsRoute,
+  ResourcesHelpCenterRoute: ResourcesHelpCenterRoute,
+  ResourcesSuccessStoriesRoute: ResourcesSuccessStoriesRoute,
+  ServicesAiConsultingRoute: ServicesAiConsultingRoute,
+  ServicesCloudMigrationRoute: ServicesCloudMigrationRoute,
+  ServicesDigitalTransformationRoute: ServicesDigitalTransformationRoute,
+  ServicesMaintenanceSupportRoute: ServicesMaintenanceSupportRoute,
+  ServicesProductStrategyRoute: ServicesProductStrategyRoute,
+  ServicesSoftwareDevelopmentRoute: ServicesSoftwareDevelopmentRoute,
+  ServicesUxUiDesignRoute: ServicesUxUiDesignRoute,
+  SolutionsEducationRoute: SolutionsEducationRoute,
+  SolutionsEnterpriseRoute: SolutionsEnterpriseRoute,
+  SolutionsFinanceRoute: SolutionsFinanceRoute,
+  SolutionsGovernmentRoute: SolutionsGovernmentRoute,
+  SolutionsHealthcareRoute: SolutionsHealthcareRoute,
+  SolutionsLogisticsRoute: SolutionsLogisticsRoute,
+  SolutionsManufacturingRoute: SolutionsManufacturingRoute,
+  SolutionsRetailRoute: SolutionsRetailRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

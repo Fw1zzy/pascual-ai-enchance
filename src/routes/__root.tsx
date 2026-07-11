@@ -77,18 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Version Seven — Enterprise AI SDR for Outbound Sales" },
+      { title: "Pascual.ai — Enterprise AI, Software & Cloud Solutions" },
       {
         name: "description",
         content:
-          "Version Seven's AI SDR books 5x more meetings across LinkedIn and email. Enterprise-grade AI outbound for high-performance sales teams.",
+          "Pascual.ai builds enterprise-grade AI agents, automation, software and cloud platforms that transform how the world's largest teams operate.",
       },
-      { name: "author", content: "Version Seven" },
-      { property: "og:title", content: "Version Seven — Enterprise AI SDR" },
+      { name: "author", content: "Pascual.ai" },
+      { property: "og:site_name", content: "Pascual.ai" },
+      { property: "og:title", content: "Pascual.ai — Enterprise AI Software Company" },
       {
         property: "og:description",
         content:
-          "Book 5x more meetings on autopilot with an AI SDR that personalizes, replies, and follows up until the meeting is booked.",
+          "AI agents, automation, custom software, cloud & data — one enterprise platform trusted by industry leaders.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
