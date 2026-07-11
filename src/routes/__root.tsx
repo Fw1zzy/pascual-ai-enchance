@@ -85,18 +85,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Pascual.ai" },
       { property: "og:site_name", content: "Pascual.ai" },
-      { property: "og:title", content: "Pascual.ai — Enterprise AI Software Company" },
+      { property: "og:title", content: "Pascual.ai — Enterprise AI, Software & Cloud Solutions" },
       {
         property: "og:description",
         content:
-          "AI agents, automation, custom software, cloud & data — one enterprise platform trusted by industry leaders.",
+          "Pascual.ai builds enterprise-grade AI agents, automation, software and cloud platforms that transform how the world's largest teams operate.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Pascual.ai — Enterprise AI, Software & Cloud Solutions" },
+      { name: "twitter:description", content: "Pascual.ai builds enterprise-grade AI agents, automation, software and cloud platforms that transform how the world's largest teams operate." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e3b256aa-7634-4072-8dab-4e1affe948fd/id-preview-8d573a63--c6933096-1be6-4c01-aebc-364204e5edde.lovable.app-1783765571830.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e3b256aa-7634-4072-8dab-4e1affe948fd/id-preview-8d573a63--c6933096-1be6-4c01-aebc-364204e5edde.lovable.app-1783765571830.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
