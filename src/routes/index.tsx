@@ -287,28 +287,77 @@ function Comparison() {
 
 function Stats() {
   const stats = [
-    { value: 4, suffix: "x", label: "Faster time-to-value" },
-    { value: 60, suffix: "%", label: "Ops cost reduction" },
-    { value: 200, suffix: "+", label: "Enterprise deployments" },
-    { value: 99.99, suffix: "%", label: "Uptime SLA" },
+    { value: 4, suffix: "x", label: "Faster time-to-value", icon: Zap, tint: "from-blue-500/15 to-blue-500/0" },
+    { value: 60, suffix: "%", label: "Ops cost reduction", icon: BarChart3, tint: "from-emerald-500/15 to-emerald-500/0" },
+    { value: 200, suffix: "+", label: "Enterprise deployments", icon: Layers, tint: "from-violet-500/15 to-violet-500/0" },
+    { value: 99.99, suffix: "%", label: "Uptime SLA", icon: Shield, tint: "from-amber-500/15 to-amber-500/0" },
   ];
   return (
-    <section className="bg-surface py-24">
-      <div className="container-page">
-        <div className="grid gap-8 rounded-3xl border border-border bg-card p-10 shadow-soft sm:grid-cols-2 lg:grid-cols-4 lg:p-14">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <p className="text-4xl font-bold tracking-tight sm:text-5xl">
-                <Counter to={s.value} />{s.suffix}
-              </p>
-              <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
-            </div>
-          ))}
+    <section className="relative overflow-hidden bg-surface py-24">
+      {/* ambient background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-40 top-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+        <div
+          className="absolute inset-0 opacity-[0.35]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(15,23,42,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(15,23,42,0.06) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+            maskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
+          }}
+        />
+      </div>
+
+      <div className="container-page relative">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-primary">
+            <Sparkles className="h-3 w-3" /> By the numbers
+          </span>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            Enterprise outcomes, measured in weeks — not quarters
+          </h2>
+          <p className="mt-3 text-base text-muted-foreground">
+            Real results from teams deploying Pascual.ai across AI, software, cloud & data.
+          </p>
+        </div>
+
+        <div className="mt-14 rounded-3xl border border-border/70 bg-white/70 p-2 shadow-elevated ring-1 ring-black/5 backdrop-blur">
+          <div className="grid gap-px overflow-hidden rounded-[calc(1.5rem-4px)] bg-border/60 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((s, i) => (
+              <div
+                key={s.label}
+                className="group relative overflow-hidden bg-card p-8 transition-colors hover:bg-white"
+              >
+                <div
+                  className={`pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-gradient-to-br ${s.tint} opacity-70 blur-2xl transition-opacity group-hover:opacity-100`}
+                />
+                <div className="relative flex items-center justify-between">
+                  <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary-soft text-primary ring-1 ring-primary/15 shadow-soft">
+                    <s.icon className="h-5 w-5" />
+                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <p className="relative mt-8 bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl">
+                  <Counter to={s.value} />
+                  <span className="text-primary">{s.suffix}</span>
+                </p>
+                <p className="relative mt-3 text-sm font-medium text-muted-foreground">{s.label}</p>
+                <div className="relative mt-6 h-1 w-full overflow-hidden rounded-full bg-muted">
+                  <div className="h-full w-2/3 rounded-full bg-primary-gradient shadow-[0_0_12px_rgba(59,130,246,0.55)] transition-all duration-700 group-hover:w-full" />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
 function Counter({ to }: { to: number }) {
   const [n, setN] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);

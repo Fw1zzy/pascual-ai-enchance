@@ -86,6 +86,12 @@ export function SiteHeader() {
           </Link>
           <Link
             to="/resources/contact"
+            className="group hidden items-center gap-1.5 rounded-lg border border-border bg-white px-4 py-2 text-sm font-medium text-foreground transition-all hover:border-primary/40 hover:text-primary md:inline-flex"
+          >
+            Sign up
+          </Link>
+          <Link
+            to="/resources/contact"
             className="group hidden items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-elevated hover:-translate-y-px sm:inline-flex"
           >
             Book a demo
