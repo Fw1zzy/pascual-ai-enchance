@@ -70,9 +70,25 @@ export function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-card p-8 shadow-soft">
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="First name" required value={values.first_name} onChange={(v) => set("first_name", v)} />
-        <Field label="Last name" required value={values.last_name} onChange={(v) => set("last_name", v)} />
-        <Field label="Work email" type="email" required value={values.email} onChange={(v) => set("email", v)} />
+        <Field
+          label="First name"
+          required
+          value={values.first_name}
+          onChange={(v) => set("first_name", v)}
+        />
+        <Field
+          label="Last name"
+          required
+          value={values.last_name}
+          onChange={(v) => set("last_name", v)}
+        />
+        <Field
+          label="Work email"
+          type="email"
+          required
+          value={values.email}
+          onChange={(v) => set("email", v)}
+        />
         <Field label="Company" value={values.company} onChange={(v) => set("company", v)} />
         <Field label="Job title" value={values.job_title} onChange={(v) => set("job_title", v)} />
         <label className="block">
@@ -90,7 +106,9 @@ export function ContactForm() {
         </label>
       </div>
       <div className="mt-4">
-        <label className="mb-1.5 block text-xs font-semibold text-foreground">How can we help?</label>
+        <label className="mb-1.5 block text-xs font-semibold text-foreground">
+          How can we help?
+        </label>
         <textarea
           required
           minLength={5}
@@ -116,7 +134,8 @@ export function ContactForm() {
           </>
         ) : (
           <>
-            Send message <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            Send message{" "}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </>
         )}
       </button>

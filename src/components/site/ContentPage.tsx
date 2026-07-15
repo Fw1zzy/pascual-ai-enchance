@@ -1,8 +1,19 @@
 import type { LucideIcon } from "lucide-react";
 import { SiteLayout } from "./SiteLayout";
 import {
-  PageHero, Section, SectionHeading, FeatureGrid, SplitBullets, StepList,
-  Timeline, StatsBand, FAQ, CTASection, CardGrid, MockPanel, type Feature,
+  PageHero,
+  Section,
+  SectionHeading,
+  FeatureGrid,
+  SplitBullets,
+  StepList,
+  Timeline,
+  StatsBand,
+  FAQ,
+  CTASection,
+  CardGrid,
+  MockPanel,
+  type Feature,
 } from "./sections";
 
 export type ContentPageConfig = {
@@ -13,14 +24,34 @@ export type ContentPageConfig = {
   secondaryCTA?: { label: string; href: string };
   heroAlign?: "center" | "left";
 
-  features?: { heading?: string; subheading?: string; eyebrow?: string; items: Feature[]; columns?: 2 | 3 | 4 };
+  features?: {
+    heading?: string;
+    subheading?: string;
+    eyebrow?: string;
+    items: Feature[];
+    columns?: 2 | 3 | 4;
+  };
   splits?: { eyebrow?: string; title: string; description?: string; bullets: string[] }[];
   steps?: { heading: string; eyebrow?: string; items: { title: string; desc: string }[] };
-  timeline?: { heading: string; eyebrow?: string; items: { title: string; desc: string; tag?: string }[] };
+  timeline?: {
+    heading: string;
+    eyebrow?: string;
+    items: { title: string; desc: string; tag?: string }[];
+  };
   stats?: { heading?: string; items: { value: string; label: string }[] };
-  cards?: { heading: string; eyebrow?: string; description?: string; items: { icon?: LucideIcon; title: string; desc: string; href?: string; tag?: string }[] };
+  cards?: {
+    heading: string;
+    eyebrow?: string;
+    description?: string;
+    items: { icon?: LucideIcon; title: string; desc: string; href?: string; tag?: string }[];
+  };
   faqs?: { q: string; a: string }[];
-  cta?: { title: string; description?: string; primary?: { label: string; href: string }; secondary?: { label: string; href: string } };
+  cta?: {
+    title: string;
+    description?: string;
+    primary?: { label: string; href: string };
+    secondary?: { label: string; href: string };
+  };
 };
 
 export function ContentPage(cfg: ContentPageConfig) {
@@ -64,15 +95,23 @@ export function ContentPage(cfg: ContentPageConfig) {
       {cfg.steps && (
         <Section surface>
           <SectionHeading eyebrow={cfg.steps.eyebrow ?? "How it works"} title={cfg.steps.heading} />
-          <div className="mt-14"><StepList steps={cfg.steps.items} /></div>
+          <div className="mt-14">
+            <StepList steps={cfg.steps.items} />
+          </div>
         </Section>
       )}
 
       {cfg.timeline && (
         <Section>
           <div className="mx-auto max-w-3xl">
-            <SectionHeading align="left" eyebrow={cfg.timeline.eyebrow ?? "Process"} title={cfg.timeline.heading} />
-            <div className="mt-10"><Timeline items={cfg.timeline.items} /></div>
+            <SectionHeading
+              align="left"
+              eyebrow={cfg.timeline.eyebrow ?? "Process"}
+              title={cfg.timeline.heading}
+            />
+            <div className="mt-10">
+              <Timeline items={cfg.timeline.items} />
+            </div>
           </div>
         </Section>
       )}
@@ -88,21 +127,32 @@ export function ContentPage(cfg: ContentPageConfig) {
 
       {cfg.cards && (
         <Section surface>
-          <SectionHeading eyebrow={cfg.cards.eyebrow} title={cfg.cards.heading} description={cfg.cards.description} />
-          <div className="mt-14"><CardGrid items={cfg.cards.items} /></div>
+          <SectionHeading
+            eyebrow={cfg.cards.eyebrow}
+            title={cfg.cards.heading}
+            description={cfg.cards.description}
+          />
+          <div className="mt-14">
+            <CardGrid items={cfg.cards.items} />
+          </div>
         </Section>
       )}
 
       {cfg.faqs && (
         <Section>
           <SectionHeading eyebrow="FAQ" title="Frequently asked" />
-          <div className="mt-10"><FAQ items={cfg.faqs} /></div>
+          <div className="mt-10">
+            <FAQ items={cfg.faqs} />
+          </div>
         </Section>
       )}
 
       <CTASection
         title={cfg.cta?.title ?? "Ready to see Pascual.ai in action?"}
-        description={cfg.cta?.description ?? "Book a personalized demo and see how leading teams deploy enterprise AI in weeks, not quarters."}
+        description={
+          cfg.cta?.description ??
+          "Book a personalized demo and see how leading teams deploy enterprise AI in weeks, not quarters."
+        }
         primary={cfg.cta?.primary ?? { label: "Book a demo", href: "/resources/contact" }}
         secondary={cfg.cta?.secondary ?? { label: "Contact sales", href: "/company/contact" }}
       />

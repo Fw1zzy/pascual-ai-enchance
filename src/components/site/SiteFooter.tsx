@@ -53,9 +53,13 @@ export function SiteFooter() {
           <div>
             <Logo />
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Enterprise AI, software, cloud & data — built to transform how the world's largest teams operate.
+              Enterprise AI, software, cloud & data — built to transform how the world's largest
+              teams operate.
             </p>
-            <form onSubmit={(e) => e.preventDefault()} className="mt-6 flex max-w-sm items-center gap-2">
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="mt-6 flex max-w-sm items-center gap-2"
+            >
               <div className="relative flex-1">
                 <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <input
@@ -65,7 +69,10 @@ export function SiteFooter() {
                   className="w-full rounded-lg border border-border bg-white py-2.5 pl-9 pr-3 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
                 />
               </div>
-              <button type="submit" className="rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-elevated">
+              <button
+                type="submit"
+                className="rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-elevated"
+              >
                 Subscribe
               </button>
             </form>
@@ -73,11 +80,16 @@ export function SiteFooter() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {cols.map((c) => (
               <div key={c.title}>
-                <p className="text-xs font-semibold uppercase tracking-widest text-foreground">{c.title}</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-foreground">
+                  {c.title}
+                </p>
                 <ul className="mt-4 space-y-3">
                   {c.links.map((l) => (
                     <li key={l.h}>
-                      <Link to={l.h} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                      <Link
+                        to={l.h}
+                        className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      >
                         {l.l}
                       </Link>
                     </li>

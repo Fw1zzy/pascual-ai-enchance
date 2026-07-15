@@ -1,3 +1,8 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
 # Logs
 logs
 *.log
@@ -7,6 +12,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies & build output
 node_modules
 dist
 dist-ssr
@@ -14,6 +20,8 @@ dist-ssr
 .vinxi
 .tanstack/**
 .nitro
+
+# Local env overrides
 *.local
 
 # Wrangler / Cloudflare
@@ -22,6 +30,7 @@ dist-ssr
 
 # Editor directories and files
 .vscode/*
+!.vscode/settings.json
 !.vscode/extensions.json
 .idea
 .DS_Store

@@ -10,7 +10,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,9 +36,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -94,9 +90,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Pascual.ai — Enterprise AI, Software & Cloud Solutions" },
-      { name: "twitter:description", content: "Pascual.ai builds enterprise-grade AI agents, automation, software and cloud platforms that transform how the world's largest teams operate." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e3b256aa-7634-4072-8dab-4e1affe948fd/id-preview-8d573a63--c6933096-1be6-4c01-aebc-364204e5edde.lovable.app-1783765571830.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e3b256aa-7634-4072-8dab-4e1affe948fd/id-preview-8d573a63--c6933096-1be6-4c01-aebc-364204e5edde.lovable.app-1783765571830.png" },
+      {
+        name: "twitter:description",
+        content:
+          "Pascual.ai builds enterprise-grade AI agents, automation, software and cloud platforms that transform how the world's largest teams operate.",
+      },
+      { property: "og:image", content: "/og-image.png" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

@@ -12,7 +12,7 @@ const ContactSchema = z.object({
 });
 
 export const submitContact = createServerFn({ method: "POST" })
-  .inputValidator((input: unknown) => ContactSchema.parse(input))
+  .validator((input: unknown) => ContactSchema.parse(input))
   .handler(async ({ data }) => {
     const url = process.env.CONTACT_SUPABASE_URL;
     const anon = process.env.CONTACT_SUPABASE_ANON_KEY;
